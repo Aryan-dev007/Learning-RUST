@@ -4,4 +4,3 @@
 
 -> This is a getting started type exercise named GUESSING GAME.
 
--> 1.1) Temperature
