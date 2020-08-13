@@ -4,4 +4,4 @@
 
 -> This is a getting started type exercise named GUESSING GAME.
 
--> comp folder is for competitive programming
+-> comp folder is for competitive programming, it marks progress I have made.
