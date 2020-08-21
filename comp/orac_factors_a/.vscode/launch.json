@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(OSX) Launch",
+            "type": "lldb",
+            "request": "launch",
+            "program": "/Users/arx6363/Desktop/learning-Rust/comp/orac_factors_a/target/debug/orac_factors_a",
+            "args": [],
+            "cwd": "${workspaceRoot}",
+        }
+    ]
+}

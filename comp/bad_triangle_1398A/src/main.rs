@@ -18,7 +18,7 @@ fn main() {
 fn solve() {
 
     let mut n = String::new();
-        std::io::stdin()  
+        std::io::stdin()
                 .read_line(&mut n)
                 .expect("Value not found");
 
@@ -26,7 +26,7 @@ fn solve() {
         Ok(num) => num,
         Err(_) => return,
     };
-    
+
     let arr = multiple_input::<i64>().unwrap();
     let c = arr.len() - 1;
     if arr[0] + arr[1] <= arr[c] {
