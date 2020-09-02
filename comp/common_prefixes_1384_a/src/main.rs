@@ -1,4 +1,3 @@
-use std::cmp::max;
 fn main() {
     let mut t = String::new();
     std::io::stdin().read_line(&mut t).expect("Value not found");
@@ -26,30 +25,34 @@ fn solve() {
     };
 
 
-    let mut mx = 0;
     let  inputs = multiple_input::<usize>().unwrap();
-    for i in inputs.clone() {
-        mx = max(i, mx);
-    }
+    let mx = inputs.iter().max().unwrap();
 
     let mut st = String::from("");
 
-    for _i in 0..mx+3 {
+    for _ in 0..mx+3 {
         st +="a";
     }
 
     println!("{}", st);
 
-    for i in 0..n {
-        let position = inputs[i];
+    for i in inputs  {
+        // let pos = i;
         let st = st.replace("\n", "");
         let mut st: Vec<char> = st.chars().collect();
-         if st[position] == 'y' { 
-             st[position] = 'x';
-        }
-        else {
-            st[position] = 'y';
-        }
+        //  if st[i] == 'y' {
+        //      st[i] = 'x';
+        //     //  println!("1");
+        // }
+        // else {
+        //     st[i] = 'y';
+        //     // println!("2");
+        // }
+        match st[i] {
+            'y' => st[i] = 'x',
+            // 'x' => st[i] = 'y',
+            _ => st[i] = 'y',
+        };
         let s: String = st.iter().map(ToString::to_string).collect();
         println!("{}", s);
     }
