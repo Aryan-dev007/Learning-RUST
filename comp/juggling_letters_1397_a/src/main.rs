@@ -48,7 +48,7 @@ fn solve() {
         }
     }
 
-    if flag==true {
+    if flag {
         println!("YES");
     }
     else {
