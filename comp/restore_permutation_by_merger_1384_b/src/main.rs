@@ -1,8 +1,10 @@
-use std::hash::Hash;
 use std::collections::HashSet;
+use std::hash::Hash;
 fn main() {
     let mut t = String::new();
-    std::io::stdin().read_line(&mut t).expect(("value not found"));
+    std::io::stdin()
+        .read_line(&mut t)
+        .expect("value not found");
 
     let mut t: usize = match t.trim().parse() {
         Ok(num) => num,
@@ -16,7 +18,6 @@ fn main() {
 }
 
 fn solve() {
-
     let mut n = String::new();
     std::io::stdin().read_line(&mut n).expect("value not found");
 
@@ -32,23 +33,19 @@ fn solve() {
         print!("{} ", i);
     }
     println!("");
-
-
-
 }
 
 fn multiple_input<T: std::str::FromStr>() -> Result<Vec<T>, T::Err> {
     let mut s = String::new();
-    std::io::stdin()
-            .read_line(&mut s)
-            .expect("Value not found");
+    std::io::stdin().read_line(&mut s).expect("Value not found");
     s.trim()
         .split_whitespace()
         .map(|word| word.parse())
         .collect()
 }
 
-fn dedup<T: Eq + Hash + Copy>(v: &mut Vec<T>) { // note the Copy constraint
+fn dedup<T: Eq + Hash + Copy>(v: &mut Vec<T>) {
+    // note the Copy constraint
     let mut uniques = HashSet::new();
     v.retain(|e| uniques.insert(*e));
 }
