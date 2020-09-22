@@ -7,3 +7,6 @@
 -> comp folder is for competitive programming, it marks progress I have made.
 
 -> Try Stress Testing for CP.
+
+-> Competitve Programming Folder moved to [New Repo](https://github.com/Aryan-dev007/Comp-Prog)
+
